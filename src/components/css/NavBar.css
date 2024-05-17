@@ -1,0 +1,74 @@
+.__bars__ {
+    cursor: pointer;
+    height: calc(var(--navh) / 2);
+
+}
+
+.__v_nav_ {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #070212;
+    box-shadow: 2px 2px 2px 0px white;
+    transition: all .1s;
+}
+
+._not_show_ {
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.__v_nav_ ul {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.__v_nav_ ul li a:hover {
+    border-bottom: 1px solid whitesmoke;
+}
+
+.__logo__ {
+    color: rgb(255 163 0);
+}
+
+.__nav_container__ {
+    width: 100%;
+    transition: all .2s;
+    height: var(--navh);
+    position: fixed;
+    left: 0;
+    right: var(--scrollbarW);
+    background: linear-gradient(180deg, #080314, #080314, #090416, #090416, transparent);
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 99;
+}
+
+.__after_nav__ {
+    height: var(--navh);
+    background: linear-gradient(180deg, #080314, #090416);
+}
+
+.__nav_container__ ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.__nav_container__ ul li {
+    display: inline;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.__nav_container__ a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.__hide_nav__ {
+    transform: translateY(-100%);
+}

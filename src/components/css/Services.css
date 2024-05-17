@@ -1,0 +1,9 @@
+#_sec4_{
+    background: linear-gradient(var(--bgCol-2),var(--bgCol-1));
+    color: whitesmoke;
+    position: relative;
+}
+
+.__titre__{
+    font-size: 32px;
+}

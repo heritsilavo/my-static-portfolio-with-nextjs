@@ -1,0 +1,49 @@
+#_sec1_ {
+    height: 100vh;
+    background: linear-gradient(180deg, var(--bgCol-1), var(--bgCol-2));
+    color: whitesmoke;
+    position: relative;
+}
+
+._64px_ {
+    font-size: 64px;
+}
+
+._32px_ {
+    font-size: 32px;
+}
+
+._24px_ {
+    font-size: 24px;
+}
+
+.__acc_txt__ {
+    margin-left: 30px;
+}
+
+.__acceuil_2__ {
+    background-image: url("/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 20px;
+}
+
+.__socials__ {
+    width: 55px;
+    background: rgba(201, 194, 194, 0.21);
+    height: 250px;
+    margin-top: calc(0px - var(--navh));
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.__socials_item__ {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}

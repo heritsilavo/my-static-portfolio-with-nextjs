@@ -1,0 +1,16 @@
+
+.__footer_container__{
+    background: linear-gradient(#050014,#000000);
+    color: whitesmoke;
+}
+.__footer_menu_link__{
+    cursor: pointer;
+    color: whitesmoke;
+}
+.__footer_menu_link__ a{
+    text-decoration: none;
+}
+#message{
+    background: transparent;
+    color: whitesmoke
+}
