@@ -137,7 +137,7 @@ const Competences = () => {
                     {/** Prev */}
                     {
                         (prev != null) && <animated.div style={prevStyle} onClick={setPrev} className="border bg-light __slide_item__ __prev_slide__">
-                            <Image alt='img' src={competences[prev].image} fill ></Image>
+                            <Image alt='img' style={{ objectFit: "cover" }} src={competences[prev].image} fill ></Image>
                         </animated.div>
                     }
 
@@ -149,7 +149,7 @@ const Competences = () => {
                     {/**Next */}
                     {
                         (next != null) && <animated.div style={nextStyle} onClick={setNext} className="border bg-light __slide_item__ __next_slide__">
-                            <Image alt='img' src={competences[next].image} fill ></Image>
+                            <Image alt='img' style={{ objectFit: "cover" }} src={competences[next].image} fill ></Image>
                         </animated.div>
                     }
                 </div>

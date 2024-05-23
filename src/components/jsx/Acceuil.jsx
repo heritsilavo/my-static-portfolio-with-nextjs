@@ -9,20 +9,20 @@ const Accueil = () => {
        * Ref taille > sm (GRAND ECRAN)
        */}
       <div className="d-none d-sm-inline-block flex-grow-1 h-75 m-2 __acceuil_1__">
-        <h1 className="mt-5 mb-0 __acc_txt__ _64px_">Bonjour,</h1>
-        <h1 className="mt-2 mb-0 __acc_txt__ _64px_">Je suis Tsilavo</h1>
-        <h1 className="mt-2 mb-0 __acc_txt__ _32px_">Developpeur web fullstack</h1>
-        <h1 className="mt-4 mb-0 __acc_txt__ _24px_">"Construisons votre avenir numerique ligne par ligne"</h1>
+        <h1 style={{ fontSize: "60px" }} className="mt-5 mb-0 __acc_txt__ ">Bonjour,</h1>
+        <h1 style={{ fontSize: "60px" }} className="mt-2 mb-0 __acc_txt__ ">Je suis Tsilavo</h1>
+        <h1 style={{ fontSize: "30px" }} className="mt-2 mb-0 __acc_txt__ ">Developpeur web fullstack</h1>
+        <h1 style={{ fontSize: "20px" }} className="mt-4 mb-0 __acc_txt__ ">"Construisons votre avenir numerique ligne par ligne"</h1>
       </div>
 
       { /**
         * Refa taille < sm (PETIT ECRAN)
         * */ }
       <div className="d-inline-block d-sm-none flex-grow-1 h-75 m-2 mt-5 __acceuil_1__">
-        <h1 className="mt-5 mb-0 __acc_txt__ _64px_">Bonjour,</h1>
-        <h1 className="mt-2 mb-0 __acc_txt__ _64px_">Je suis Tsilavo</h1>
-        <h1 className="mt-2 mb-0 __acc_txt__ _32px_">Developpeur web fullstack</h1>
-        <h1 className="mt-4 mb-0 __acc_txt__ _18px_">"Construisons votre avenir numerique ligne par ligne"</h1>
+        <h1 style={{ fontSize: "45px" }} className="mt-5 mb-0 __acc_txt__">Bonjour,</h1>
+        <h1 style={{ fontSize: "45px" }} className="mt-2 mb-0 __acc_txt__">Je suis Tsilavo</h1>
+        <h1 style={{ fontSize: "23px" }} className="mt-2 mb-0 __acc_txt__">Developpeur web fullstack</h1>
+        <h1 style={{ fontSize: "15px" }} className="mt-4 mb-0 __acc_txt__">"Construisons votre avenir numerique ligne par ligne"</h1>
       </div>
 
       {

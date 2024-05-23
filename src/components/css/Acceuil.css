@@ -1,6 +1,6 @@
 #_sec1_ {
     height: 100vh;
-    background: linear-gradient(180deg, var(--bgCol-1), var(--bgCol-2));
+    background: linear-gradient(180deg, var(--bgCol-1) 10%, var(--bgCol-2) 90%);
     color: whitesmoke;
     position: relative;
 }
