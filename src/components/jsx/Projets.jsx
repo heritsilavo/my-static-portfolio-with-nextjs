@@ -37,7 +37,7 @@ const Project = () => {
       </div>
       <div className="flex-grow-1 mt-3 col-12 mb-2 mt-2 d-flex flex-column flex-md-row-reverse">
         <div className="d-flex align-items-start justify-content-center m-5 mt-2 mb-2 col-10 col-md-4 __select_projet__">
-          <ol style={{ userSelect: "-moz-none" }} className="m-0 col-10">
+          <ol style={{ userSelect: "none" }} className="m-0 col-10">
             {projects.map((proj) => (
               <li key={proj.title} onClick={() => onChoose(proj)} className="m-2 p-2 __list_item__">
                 <h5>{proj.title}</h5>
