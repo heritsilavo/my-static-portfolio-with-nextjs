@@ -1,12 +1,12 @@
-'use client'
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 import Accueil from '@/components/jsx/Acceuil'
 import APropos from '@/components/jsx/APropos'
 import Project from '@/components/jsx/Projets'
 import Service from '@/components/jsx/Services'
 import Footer from '@/components/jsx/Footer'
 import NavBar from '@/components/jsx/NavBar'
+import { Suspense } from 'react'
+import Competences from '@/components/jsx/Competences'
 
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
@@ -25,15 +25,20 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 })
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
+export const metadata = {
+  title: 'Heritsilavo'
+}
+
 export default function Page() {
   return (
     <>
-        <NavBar></NavBar>
-        <Accueil></Accueil>
-        <APropos></APropos>
-        <Project></Project>
-        <Service></Service>
-        <Footer></Footer>
+      <NavBar></NavBar>
+      <Accueil></Accueil>
+      <APropos></APropos>
+      <Competences></Competences>
+      <Project></Project>
+      <Service></Service>
+      <Footer></Footer>
     </>
   )
 }

@@ -66,7 +66,7 @@ const Project = () => {
               <div className="col-11 d-flex align-items-center justify-content-between mt-2 __links__ mb-2">
                 <div className="h-100 d-flex">
                   {selected.git.trim() !== '' && (
-                    <Link href={selected.git} className='text-white text-decoration-none' passHref>
+                    <Link target='_blank' href={selected.git} className='text-white text-decoration-none' passHref>
                       <span target="_blank" className="m-2 mt-0 mb-0 d-flex align-items-center _git_">
                         <div className="_link_ico_">
                           <img src="/github.svg" alt="git" />
@@ -76,7 +76,7 @@ const Project = () => {
                     </Link>
                   )}
                   {selected.link.trim() !== '' && (
-                    <Link className='text-white text-decoration-none' href={selected.link} passHref>
+                    <Link target='_blank' className='text-white text-decoration-none' href={selected.link} passHref>
                       <span target="_blank" className="m-2 mt-0 mb-0 d-flex align-items-center _git_">
                         <div className="border _link_ico_ d-flex align-items-center justify-content-center text-white">
                           <Link1Icon></Link1Icon>

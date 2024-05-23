@@ -11,10 +11,10 @@
   },
   "scripts": {
     "lint": "next lint --fix --dir app",
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
-    "start": "next start"
+    "start": "next start -p 3001"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^9.4.0",

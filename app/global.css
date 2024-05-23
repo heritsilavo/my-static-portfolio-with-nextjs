@@ -5,6 +5,13 @@
   --scrollbarW: 10px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
 html {
   width: 100vw;
   height: 100vh;

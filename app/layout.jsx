@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { Layout } from '@/components/dom/Layout'
 import '@/global.css'
 import { createContext, useContext, useState, useRef, useEffect } from 'react';
@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
   }
 
   useEffect(() => {
-    console.log(showNav);
     const rootElement = document.getElementById('root');
 
     if (rootElement) {

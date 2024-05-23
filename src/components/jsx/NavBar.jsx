@@ -1,3 +1,4 @@
+"use client"
 import { useContext, useState } from 'react';
 import Link from 'next/link';
 import { ShowNavContext } from '@/layout';
@@ -26,6 +27,11 @@ const NavBar = () => {
           <li className="m-2 col-4">
             <Link href="/#_sec2_" passHref>
               <span className="col-12">A propos</span>
+            </Link>
+          </li>
+          <li className="m-2 col-4">
+            <Link href="/#_sec5_" passHref>
+              <span className="col-12">Competences</span>
             </Link>
           </li>
           <li className="m-2 col-4">
@@ -58,13 +64,18 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
+          <Link href="/#_sec5_" passHref>
+            <span>Competences</span>
+          </Link>
+        </li>
+        <li>
           <Link href="/#_sec3_" passHref>
-            <span>Mes Projets</span>
+            <span>Projets</span>
           </Link>
         </li>
         <li>
           <Link href="/#_sec4_" passHref>
-            <span>Mes services</span>
+            <span>Services</span>
           </Link>
         </li>
       </ul>

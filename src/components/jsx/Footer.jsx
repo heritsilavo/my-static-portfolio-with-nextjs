@@ -36,7 +36,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="d-flex flex-column align-items-center justify-content-center col-12">
+      <div className="d-flex flex-column align-items-center justify-content-center col-12 mb-4">
         <div className="col-10 col-sm-8 col-md-4 col-lg-3 mt-1 border"></div>
         Edité par Heritsilavo le 2024
       </div>

@@ -1,0 +1,102 @@
+:root {
+    --slide-width: 350px;
+}
+
+#_sec5_ {
+    background: linear-gradient(var(--bgCol-1), var(--bgCol-2), var(--bgCol-1));
+    color: whitesmoke;
+    position: relative;
+    height: 100%;
+}
+
+.__titre__ {
+    font-size: 28px;
+}
+
+.__select_caroussel__ {
+    height: 40px;
+}
+
+.__carrousel__ {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.__slide__ {
+    height: 80%;
+    width: var(--slide-width);
+    display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.__slide_item__ {
+    position: absolute;
+    color: black;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 0px white;
+
+}
+
+.__curr_slide__ {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 0;
+    right: 0;
+}
+
+
+.__prev_slide__ {
+    width: 90%;
+    height: 75%;
+    z-index: 9;
+    opacity: 0.7;
+    cursor: pointer;
+    right: 80%;
+}
+
+.__next_slide__ {
+    left: 80%;
+    height: 75%;
+    z-index: 9;
+    opacity: 0.7;
+    cursor: pointer;
+    width: 90%;
+}
+
+.__control__ {
+    position: absolute;
+    z-index: 11;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: .2;
+    padding: 0;
+    transition: all .1s;
+}
+
+.__control__:hover {
+    opacity: 1;
+}
+
+.__control__ svg {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
+
+.__btn_prev__ {
+    left: 0;
+}
+
+.__btn_next__ {
+    right: 0;
+}
