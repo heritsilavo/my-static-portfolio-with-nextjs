@@ -1,6 +1,6 @@
 #_sec1_ {
     height: 100vh;
-    background: linear-gradient(180deg, var(--bgCol-1) 10%, var(--bgCol-2) 90%);
+    background: var(--bgCol-2);
     color: whitesmoke;
     position: relative;
 }
@@ -26,10 +26,6 @@
 }
 
 .__acceuil_2__ {
-    background-image: url("/logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     margin-right: 20px;
 }
 
