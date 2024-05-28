@@ -34,6 +34,7 @@ const Accueil = () => {
         <h1 style={{ fontSize: "60px" }} className="mt-2 mb-0 __acc_txt__ ">Je suis Tsilavo</h1>
         <h1 style={{ fontSize: "30px" }} className="mt-2 mb-0 __acc_txt__ ">Developpeur web fullstack</h1>
         <h1 style={{ fontSize: "20px" }} className="mt-4 mb-0 __acc_txt__ ">"Construisons votre avenir numerique ligne par ligne"</h1>
+        <a href="/cv.pdf" className='mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
       </div>
 
       { /**
@@ -44,6 +45,7 @@ const Accueil = () => {
         <h1 style={{ fontSize: "45px" }} className="mt-2 mb-0 __acc_txt__">Je suis Tsilavo</h1>
         <h1 style={{ fontSize: "23px" }} className="mt-2 mb-0 __acc_txt__">Developpeur web fullstack</h1>
         <h1 style={{ fontSize: "15px" }} className="mt-4 mb-0 __acc_txt__">"Construisons votre avenir numerique ligne par ligne"</h1>
+        <a href="/cv.pdf" className='mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
       </div>
 
       {

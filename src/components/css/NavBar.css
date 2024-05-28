@@ -6,11 +6,14 @@
 
 .__v_nav_ {
     position: absolute;
-    top: 100%;
+    top: 0;
     right: 0;
-    background: #070212;
-    box-shadow: 2px 2px 2px 0px white;
     transition: all .1s;
+    visibility: visible;
+}
+
+.__hide_v_nav__ {
+    visibility: hidden;
 }
 
 ._not_show_ {
@@ -21,21 +24,24 @@
 .__v_nav_ ul {
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
 }
 
-.__v_nav_ ul li a:hover {
-    border-bottom: 1px solid whitesmoke;
+.__v_nav_ ul span {
+    font-size: 13px;
 }
 
 .__logo__ {
-    color: rgb(255 163 0);
+    color: rgb(255, 136, 0);
 }
 
 .__nav_container__ {
     width: 100%;
     transition: all .2s;
-    height: var(--navh);
+    min-height: var(--navh);
     position: fixed;
     left: 0;
     right: var(--scrollbarW);
