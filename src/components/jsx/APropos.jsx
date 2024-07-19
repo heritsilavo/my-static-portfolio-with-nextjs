@@ -8,8 +8,8 @@ const APropos = () => {
       </div>
       <div className="mt-3 col-12 mt-2 d-flex flex-column flex-md-row">
         <div className="__IMG__ col-0 col-md-5">
-          <div className="__me_png__">
-            <img src="/me.png" alt="Discover Nuxt 3" />
+          <div style={{ overflow: 'hidden' }} className="shadow __me_png__">
+            <img src="/moi2.jpeg" alt="Discover Nuxt 3" />
           </div>
         </div>
         <div className="flex-grow-md-1 d-flex align-items-start justify-content-center">

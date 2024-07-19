@@ -35,8 +35,8 @@ export default function Page() {
       <NavBar></NavBar>
       <Accueil></Accueil>
       <APropos></APropos>
-      <Competences></Competences>
       <Project></Project>
+      <Competences></Competences>
       <Service></Service>
       <Footer></Footer>
     </>

@@ -1,8 +1,10 @@
-"use client"
+'use client'
 import Link from 'next/link';
 import '@/components/css/Acceuil.css'
-import { Suspense } from 'react'
-import dynamic from 'next/dynamic';
+import { Suspense, useContext, useState, useEffect } from 'react'
+import dynamic, { noSSR } from 'next/dynamic';
+import { BreakpoitContext } from '@/layout';
+import { OrbitControls } from '@react-three/drei'
 
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
@@ -23,18 +25,28 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 const MonLogo = dynamic(() => import('@/components/jsx/MonLogo').then((mod) => mod.MonLogo), { ssr: false })
 
 const Accueil = () => {
-  return (
-    <section className="d-flex flex-column flex-md-row align-items-center justify-content-evenly col-12" id="_sec1_">
+  const [windowWidth, setWindowWidth] = useState()
+  useEffect(() => { setWindowWidth(window.innerWidth) }, [])
+  useEffect(function () {
+    const onResizeWindow = function (event) {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', onResizeWindow)
+    return () => { window.removeEventListener('resize', onResizeWindow) }
+  }, [])
 
-      {/**
+  return (
+    <section style={{ userSelect: "none", MozUserSelect: "-moz-none" }} className="d-flex flex-column flex-md-row align-items-center justify-content-evenly col-12" id="_sec1_">
+
+      {/**768 970
        * Ref taille > sm (GRAND ECRAN)
        */}
-      <div className="d-none d-sm-inline-block flex-grow-1 h-75 m-2 __acceuil_1__">
-        <h1 style={{ fontSize: "60px" }} className="mt-5 mb-0 __acc_txt__ ">Bonjour,</h1>
-        <h1 style={{ fontSize: "60px" }} className="mt-2 mb-0 __acc_txt__ ">Je suis Tsilavo</h1>
-        <h1 style={{ fontSize: "30px" }} className="mt-2 mb-0 __acc_txt__ ">Developpeur web fullstack</h1>
-        <h1 style={{ fontSize: "20px" }} className="mt-4 mb-0 __acc_txt__ ">"Construisons votre avenir numerique ligne par ligne"</h1>
-        <a href="/cv.pdf" className='mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
+      <div style={{ paddingLeft: ((windowWidth < 1300) ? ((windowWidth <= 970 && windowWidth >= 768) ? "10px" : "40px") : "60px") }} className="d-none d-sm-inline-block flex-grow-1 h-75 m-2 __acceuil_1__">
+        <h1 style={{ fontSize: ((windowWidth < 1300) ? ((windowWidth <= 970 && windowWidth >= 768) ? "50px" : "60px") : "72px") }} className="mt-5 mb-0 __acc_txt__ ">Bonjour,</h1>
+        <h1 style={{ fontSize: ((windowWidth < 1300) ? ((windowWidth <= 970 && windowWidth >= 768) ? "50px" : "60px") : "72px") }} className="mt-2 mb-0 __acc_txt__ ">Je suis Tsilavo</h1>
+        <h1 style={{ fontSize: ((windowWidth < 1300) ? ((windowWidth <= 970 && windowWidth >= 768) ? "25px" : "30px") : "40px") }} className="mt-2 mb-0 __acc_txt__ ">Developpeur web fullstack</h1>
+        <h1 style={{ fontSize: ((windowWidth < 1300) ? ((windowWidth <= 970 && windowWidth >= 768) ? "15px" : "20px") : "24px") }} className="mt-4 mb-0 __acc_txt__ ">"Construisons votre avenir numerique ligne par ligne"</h1>
+        <a href="/Heritsilavo ANDRIANTSILAVINA.pdf" className='mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
       </div>
 
       { /**
@@ -45,7 +57,7 @@ const Accueil = () => {
         <h1 style={{ fontSize: "45px" }} className="mt-2 mb-0 __acc_txt__">Je suis Tsilavo</h1>
         <h1 style={{ fontSize: "23px" }} className="mt-2 mb-0 __acc_txt__">Developpeur web fullstack</h1>
         <h1 style={{ fontSize: "15px" }} className="mt-4 mb-0 __acc_txt__">"Construisons votre avenir numerique ligne par ligne"</h1>
-        <a href="/cv.pdf" className='mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
+        <a href="/Heritsilavo ANDRIANTSILAVINA.pdf" className='shadow-lg mt-4 mb-0 __acc_txt__ btn btn-success' download>Telecharger CV </a>
       </div>
 
       {
@@ -53,8 +65,8 @@ const Accueil = () => {
          * Logo HT
          */
       }
-      <div className="col-12 position-relative col-md-5 h-50 h-md-100 __acceuil_2__">
-        <View orbit="true" className='h-100 col-12 d-flex flex-column align-items-center justify-content-center'>
+      <div className={` col-12 position-relative col-md-5 __acceuil_2__` + ((windowWidth < 1300) ? ' h-50 ' : ' h-75 ')}>
+        <View orbitControls={<OrbitControls enableZoom={false} />} className='h-100 col-12 d-flex flex-column align-items-center justify-content-center'>
           <Suspense fallback={null}>
             <MonLogo></MonLogo>
             <Common color={"#12092D"}></Common>

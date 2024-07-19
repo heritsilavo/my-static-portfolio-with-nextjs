@@ -53,3 +53,14 @@ a {
   color: whitesmoke;
   text-decoration: none;
 }
+
+.__loding___ {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #292c3a;
+  color: whitesmoke;
+}

@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { ShowNavContext } from '@/layout';
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/components/css/NavBar.css'
+import { styled } from "@stitches/react"
+import { animated } from '@react-spring/web';
 
-const NavBar = () => {
+const Nav = () => {
   const { showNav, toggleShowNav } = useContext(ShowNavContext)
   const [showvNav, setShowvNav] = useState(false);
 
@@ -78,4 +80,5 @@ const NavBar = () => {
   );
 };
 
+const NavBar = styled(animated(Nav), {})
 export default NavBar;

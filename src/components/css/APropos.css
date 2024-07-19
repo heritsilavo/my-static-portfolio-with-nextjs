@@ -1,27 +1,26 @@
-
-#_sec2_{
-    background: linear-gradient(var(--bgCol-2),var(--bgCol-1));
+#_sec2_ {
+    background: linear-gradient(var(--bgCol-2), var(--bgCol-1));
     color: whitesmoke;
     position: relative;
 }
 
-.__IMG__{
+.__IMG__ {
     display: flex;
     align-items: center;
     justify-content: center
 }
 
-.__me_png__{
+.__me_png__ {
     border-radius: 50%;
-    width:  250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 
-.__me_png__ img{
+.__me_png__ img {
     width: 100%;
     object-fit: contain;
 }
 
-.__titre__{
+.__titre__ {
     font-size: 32px;
 }
