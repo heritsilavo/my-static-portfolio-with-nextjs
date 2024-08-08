@@ -7,6 +7,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Provider } from 'react-redux';
 import { makeStore } from '@/lib/store';
 import { Circles, LineWave, Rings } from 'react-loader-spinner';
+import dynamic from 'next/dynamic';
+
+import Lottie from 'react-lottie';
+import animationData from '@/lotties/WaterLogo';
+
 
 export const breakpoints = {
   xs: 0,
@@ -34,6 +39,7 @@ export default function RootLayout({ children }) {
   const [lastScrollValue, setlastScrollValue] = useState(0)
 
   const [breakpoint, setBreakpoint] = useState()
+  
   useEffect(function () {
     setBreakpoint(getBreakPoints(window.innerWidth))
     const handleResizeScreen = function (event) {
@@ -68,13 +74,33 @@ export default function RootLayout({ children }) {
       };
     }
   }, [showNav, lastScrollValue]);
-
+  /**
+   * Loading
+   */
   const [loading, setLoading] = useState(true)
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+
+  
   return (
     <html lang='en' className='antialiased'>
       <head />
       <body>
-        {(loading) && <div className="__loding___ d-flex align-items-center justify-content-center"> <LineWave firstLineColor='#0095ff' middleLineColor='#c897ff' lastLineColor='#ff9f4b' /> </div>}
+        {(loading) && <div className="__loding___ d-flex align-items-center justify-content-center"> 
+            {/* <LineWave firstLineColor='#0095ff' middleLineColor='#c897ff' lastLineColor='#ff9f4b' />  */}
+            <Lottie 
+              options={defaultOptions}
+              height={300}
+              width={300}
+            />
+          </div>}
         <LoadingContext.Provider value={[loading, setLoading]}>
           <BreakpoitContext.Provider value={breakpoint}>
             <ShowNavContext.Provider value={{ showNav, toggleShowNav }}>
