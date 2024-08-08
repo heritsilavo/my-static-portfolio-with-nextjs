@@ -8,11 +8,20 @@ const Layout = ({ children }) => {
   const ref = useRef()
 
   return (
-    <div ref={ref} style={{ position: 'relative', width: ' 100%', height: '100%', touchAction: 'auto', }} id='root'>
+    <div
+      ref={ref}
+      style={{
+        position: 'relative',
+        width: ' 100%',
+        height: '100%',
+        overflow: 'auto',
+        touchAction: 'auto',
+      }}
+    >
       {children}
       <Scene
         style={{
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           left: 0,
           width: '100vw',

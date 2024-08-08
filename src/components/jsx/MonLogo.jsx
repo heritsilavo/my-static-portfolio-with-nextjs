@@ -25,7 +25,7 @@ export function MonLogo(props) {
     useCursor(hovered)
 
     useFrame(function (state, delta) {
-        //console.log(nodes);
+
     })
 
     // useFrame((state, delta) => {

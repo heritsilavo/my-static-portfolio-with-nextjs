@@ -1,21 +1,23 @@
 "use client"
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ShowNavContext } from '@/layout';
+import { LoadingContext, ShowNavContext } from '@/layout';
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/components/css/NavBar.css'
 import { styled } from "@stitches/react"
-import { animated } from '@react-spring/web';
+import { animated, useChain, useSpring, useSpringRef } from '@react-spring/web';
 
 const Nav = () => {
   const { showNav, toggleShowNav } = useContext(ShowNavContext)
   const [showvNav, setShowvNav] = useState(false);
+  const [loading, setLoading] = useContext(LoadingContext);
 
   const showhamburger = () => setShowvNav(true);
   const hidehamburger = () => setShowvNav(false);
 
+
   return (
-    <div onMouseLeave={hidehamburger} className={`d-flex align-items-center justify-content-between __nav_container__ ${showNav ? '' : '__hide_nav__'}`}>
+    <animated.div onMouseLeave={hidehamburger} className={`d-flex align-items-center justify-content-between __nav_container__ ${showNav ? '' : '__hide_nav__'}`}>
       <div className="d-none d-md-inline __logo__">HERITSILAVO</div>
       <ul className="d-none d-md-inline-block m-1 mt-0 mb-0">
         <li>
@@ -76,7 +78,7 @@ const Nav = () => {
         </ul>
       </div>
 
-    </div>
+    </animated.div>
   );
 };
 
