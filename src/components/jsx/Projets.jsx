@@ -40,13 +40,13 @@ const Project = () => {
   });
   const rightAnimation = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateX(0%)' : 'translateX(50%)',
+    transform: inView ? 'translateX(0%)' : 'translateX(-50%)',
     config: { tension: 200, friction: 20 }
   });
 
   const leftAnimation = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateX(0%)' : 'translateX(-50%)',
+    transform: inView ? 'translateX(0%)' : 'translateX(50%)',
     config: { tension: 200, friction: 20 }
   });
 
