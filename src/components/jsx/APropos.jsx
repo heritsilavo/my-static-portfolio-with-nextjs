@@ -21,9 +21,13 @@ const APropos = () => {
     config: { tension: 200, friction: 20 }
   });
 
+  const fadeIn = useSpring({
+    opacity: inView ? 1 : 0,
+  });
+
   return (
     <section ref={ref} className="d-flex flex-column align-items-center justify-content-start col-12" id="_sec2_">
-      <animated.div className="__titre__ col-12 text-center mt-2">
+      <animated.div style={fadeIn} className="__titre__ col-12 text-center mt-2">
         Mieux me connaitre
       </animated.div>
       <div className="mt-3 col-12 mt-2 d-flex flex-column flex-md-row">
